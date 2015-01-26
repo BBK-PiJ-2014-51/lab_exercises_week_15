@@ -6,6 +6,7 @@ public interface PrimeDivisorList {
 	 * adds a prime number to list, if num is present the count is incremented
 	 * 
 	 * @param nextInt
+	 * @throws IllegalArgumentException 
 	 */
 	public void add(Integer nextInt);
 		
