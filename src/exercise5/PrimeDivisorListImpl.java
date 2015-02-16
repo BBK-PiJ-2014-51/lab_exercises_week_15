@@ -6,9 +6,9 @@ public class PrimeDivisorListImpl implements PrimeDivisorList {
 	int currentIndex = 0;
 	
 	@Override
-	public void add(Integer nextInt){// throws IllegalArgumentException {
+	public void add(Integer nextInt) throws IllegalArgumentException{
 		if (nextInt == null) throw new NullPointerException();
-		//if (!isPrime(nextInt)) throw new IllegalArgumentException();
+		if (!isPrime(nextInt)) throw new IllegalArgumentException();
 		for (int i = 0; i < currentIndex; i++){
 			if (primes[i].getValue().equals(nextInt)){
 				primes[i].incrementCount();

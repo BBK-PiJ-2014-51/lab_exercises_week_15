@@ -8,7 +8,7 @@ public interface PrimeDivisorList {
 	 * @param nextInt
 	 * @throws IllegalArgumentException 
 	 */
-	public void add(Integer nextInt);
+	public void add(Integer nextInt) throws IllegalArgumentException;
 		
 	/**
 	 * Returns list in the form of [ num1^num1count * num2^num2count .... = total ]

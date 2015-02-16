@@ -14,16 +14,13 @@ public class PrimeDivisorListTest {
 	}
 	
 	@Test (expected = NullPointerException.class)
-	public void addNull() {
-			list.add(null);
-
+	public void addNull() throws IllegalArgumentException {
+				list.add(null);
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
-	public void addNonPrime() throws NullPointerException, IllegalArgumentException {
-
+	public void addNonPrime() throws IllegalArgumentException {
 			list.add(new Integer(8));
-
 	}
 	
 	@Test
@@ -34,7 +31,10 @@ public class PrimeDivisorListTest {
 			list.add(11);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
 		}
+		
 		System.out.println(list.toString());
 		assertEquals("[ 7^2 * 11 = 539 ]", list.toString());
 	}
